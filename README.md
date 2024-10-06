@@ -1,8 +1,8 @@
-#Overview
+# Overview
 StockSync is a web application that allows users to track real-time stock prices and engage in live chats with other traders. The application provides stock price analysis charts, enabling users to make informed decisions.
 
-#Key Components
-1.Stock Price Monitoring
+# Key Components
+1. Stock Price Monitoring
 -Real-time stock prices are fetched from an API.
 -High and low prices are visualized using dynamic charts.
 Live Chat
