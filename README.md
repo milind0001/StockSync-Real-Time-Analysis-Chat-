@@ -20,19 +20,18 @@ StockSync is a web application that allows users to track real-time stock prices
 - MongoDB for storing user and stock data.
 # Usage
 1. Clone the Repository
-
 git clone https://github.com/milind0001/StockSync-Real-Time-Analysis-Chat-.git
+
 2. Install Dependencies
-
-
 cd StockSync-Real-Time-Analysis-Chat
 npm install
+
 3. Start the Server
 npm start
+
 4. Access the Application
 - Open your browser and navigate to http://localhost:3000.
 
 5. Use the Features
-
 - View stock prices and charts.
 - Join live chat rooms to discuss trading strategies.
