@@ -21,16 +21,16 @@ StockSync is a web application that allows users to track real-time stock prices
 # Usage
 1. Clone the Repository
    
-git clone https://github.com/milind0001/StockSync-Real-Time-Analysis-Chat-.git
+- git clone https://github.com/milind0001/StockSync-Real-Time-Analysis-Chat-.git
 
 2. Install Dependencies
    
-cd StockSync-Real-Time-Analysis-Chat
-npm install
+- cd StockSync-Real-Time-Analysis-Chat
+- npm install
 
 3. Start the Server
    
-npm start
+- npm start
 
 4. Access the Application
    
