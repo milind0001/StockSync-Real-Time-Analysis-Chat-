@@ -32,7 +32,7 @@ async function clearPreviousChats() {
         console.error('Error deleting previous chats:', err);
     }
 }
-clearPreviousChats();  // Call the function to clear chat history on server restart
+clearPreviousChats();
 
 // Stock API
 const STOCK_API_URL = "https://finnhub.io/api/v1/quote";
@@ -50,10 +50,13 @@ app.get('/api/stock/:symbol', async (req, res) => {
 
 // Handle Socket.io chat
 io.on('connection', (socket) => {
-    const username = `User${Math.floor(Math.random() * 10000)}`;
-    console.log(`New user connected: ${username}`);
+    let username = '';
 
-    // No need to send previous chats since they are deleted on server restart
+    socket.on('setUsername', (name) => {
+        username = name;
+        console.log(`${username} connected.`);
+    });
+
     socket.on('chatMessage', (data) => {
         const newMessage = new Chat({ user: username, message: data.message });
         newMessage.save().then(() => {
@@ -62,11 +65,10 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-        console.log(`${username} disconnected`);
+        console.log(`${username || 'A user'} disconnected`);
     });
 });
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
