@@ -34,7 +34,7 @@ StockSync is a web application that allows users to track real-time stock prices
 
 4. Access the Application
    
-- Open your browser and navigate to http://localhost:3000.
+- Open your browser and navigate to http://localhost:5000.
 
 5. Use the Features
    
