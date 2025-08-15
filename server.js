@@ -23,16 +23,6 @@ const chatSchema = new mongoose.Schema({
 });
 const Chat = mongoose.model('Chat', chatSchema);
 
-// Delete previous chat on server restart
-async function clearPreviousChats() {
-    try {
-        await Chat.deleteMany({});
-        console.log('Previous chats deleted.');
-    } catch (err) {
-        console.error('Error deleting previous chats:', err);
-    }
-}
-clearPreviousChats();
 
 // Stock API
 const STOCK_API_URL = "https://finnhub.io/api/v1/quote";
